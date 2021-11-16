@@ -38,6 +38,7 @@ func Consume(inputQueue string, channel *amqp.Channel) {
 			is_ok := true
 
 			if is_ok == true {
+				fmt.Println(job)
 				d.Ack(false)
 			} else {
 				d.Nack(false, true)
